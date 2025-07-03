@@ -1,9 +1,18 @@
--- Script Loader with Key & HWID System
--- Designed for GameSense Lua API
--- Fetches scripts from GitHub
+local json = {
+    decode = function(str)
+        return loadstring("return " .. str)()
+    end,
+    encode = function(tbl)
+        local result = {}
+        for k, v in pairs(tbl) do
+            table.insert(result, string.format('"%s":%s', k, type(v) == "string" and '"' .. v .. '"' or tostring(v)))
+        end
+        return "{" .. table.concat(result, ",") .. "}"
+    end
+}
 
 local http = require("gamesense/http")
-local json = require("gamesense/json")
+local json = json
 
 -- Configuration
 local GITHUB_USERNAME = "lordbober666"
