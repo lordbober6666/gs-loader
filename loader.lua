@@ -6,10 +6,11 @@ local http = require("gamesense/http")
 local json = require("gamesense/json")
 
 -- Configuration
-local GITHUB_USERNAME = "yourgithubusername"
-local GITHUB_REPO = "yourgithubrepo"
+local GITHUB_USERNAME = "lordbober666"
+local GITHUB_REPO = "gs-loader"
 local GITHUB_BRANCH = "main" -- or "master"
-local DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/yourwebhook"
+local DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1390248976003108906/NBirdDwqBq-C9B4qk6MC0m2jXWCd4B4H7lgfk6i1mWRCHoH-ucwy3iZRT1PxivlRKlUq"
+local scripts_list = {"quantum"} -- Your actual script names (without .lua)
 
 -- HWID generation function (simple example)
 local function get_hwid()
